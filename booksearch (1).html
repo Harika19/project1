@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<script language="javascript"> 
+function validate()
+{
+var name = document.f1.book_name.value;
+var id = document.f1.book_id.value;
+var author = document.f1.book_author.value; 
+if(name=="" && id=="" && author=="")
+{
+alert("Please fill any one of the fields");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<font size="6" color="green">
+<marquee behaviour="scroll" direction="left">You can search a book either by its name or id or author name</marquee>
+</font>
+<center>
+<h3 align="center"><u>SEARCH FOR A BOOK</u></h3> 
+<table border="3">
+<tr>
+<td>
+<form name="f1" action="insert2.php" method="post" onsubmit="return validate()"> 
+<table cellspacing="10" cellpadding="5">
+<tr>
+<td>BOOK NAME</td>
+<td><input type="text" size="30" name="book_name"/></td>
+</tr> 
+<tr>
+<td>BOOK ID</td>
+<td><input type="text" size="30" name="book_id"/></td>
+</tr> 
+<tr>
+<td>BOOK AUTHOR</td>
+<td><input type="text" size="30" name="book_author"/></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value="GO"/>
+&nbsp;<input type="reset" value="RESET" /></td> 
+</tr>
+</table>
+</form>
+</td></tr></table>
+</center>
+</body>
+</html>

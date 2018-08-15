@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+body  {
+    background-image: url("http://www.leoninternational.org/Admin/assets/img/backgrounds/2.jpg");
+    background-color: #cccccc;
+}
+</style>
+<title> Sign-in Page </title> 
+<script language="javascript"> 
+function validate()
+{
+var nam = document.f1.uname.value; if(nam=="")
+{
+alert("Please enter name"); document.f1.uname.focus; return false;
+}
+var pwd = document.f1.pass.value; if(pwd=="")
+{
+alert("Please enter Password"); document.f1.pass.focus; return false;
+}
+}
+</script>
+</head>
+<body>
+<br/><br/><br/>
+<center>
+<form name="f1" action="validation.php" method="post" onsubmit="return validate()">
+<table border="3" cellpadding="0" cellspacing="0"> <tr>
+<td>
+<table cellspacing="10"> <tr>
+<td colspan="2" align="center"><h2><u>Login Page<u></h2></td>
+</tr>
+<tr>
+<td>	User Name</td>
+<td><input type="text" name="uname" size="15"></td> </tr>
+<tr>
+<td>	Password</td>
+<td><input type="password" name="pass" size="15"></td> </tr>
+<tr>
+<td align="center"><input type="submit" value="Sign in"></td> <td align="center"><input type="reset" value="Clear"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+

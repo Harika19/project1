@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<script language="javascript"> 
+function validate()
+{
+var name = document.f1.book_name.value;
+var id = document.f1.book_id.value;
+var author = document.f1.book_author.value; 
+if(name=="" || id=="" || author=="")
+{
+alert("Please fill all fields for issuing book in the BOOK ISSUE option.");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<font size="6" color="green">
+<marquee behaviour="scroll" direction="left">Issue a book only if you know the complete details of the book.</marquee>
+</font>
+<center>
+<h3 align="center"><u>ISSUE A BOOK</u></h3> 
+<table border="3">
+<tr>
+<td>
+<form name="f1" action="insert3.php" method="post" onsubmit="return validate()"> 
+<table cellspacing="10" cellpadding="5">
+<tr>
+<td>BOOK NAME</td>
+<td><input type="text" size="30" name="book_name"/></td>
+</tr> 
+<tr>
+<td>BOOK ID</td>
+<td><input type="text" size="30" name="book_id"/></td>
+</tr> 
+<tr>
+<td>BOOK AUTHOR</td>
+<td><input type="text" size="30" name="book_author"/></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value="GO"/>
+&nbsp;<input type="reset" value="RESET" /></td> 
+</tr>
+</table>
+</form>
+</td></tr></table>
+</center>
+</body>
+</html>
